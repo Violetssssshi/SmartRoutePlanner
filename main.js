@@ -7,9 +7,9 @@ export default async function () {
 }
 
 // ===================== Imports =====================
-import { initAutocomplete } from './mapManager.js';
-import { drawRoute } from './routeManager.js';
-import { exportTableToPDF } from './export.js';
+import { initAutocomplete } from './SourceCode/mapManager.js';
+import { drawRoute } from './SourceCode/routeManager.js';
+import { exportTableToPDF } from './SourceCode/export.js';
 
 import {
   saveStartTime,
@@ -19,12 +19,12 @@ import {
   populateLoadDropdown,
   loadFromLocalStorage,
   deleteSavedPlan
-} from './storage.js';
+} from './SourceCode/storage.js';
 
 import {
   clearTable,
   makeTableDraggable
-} from './tableManager.js';
+} from './SourceCode/tableManager.js';
 
 // ===================== Event Listeners =====================
 
