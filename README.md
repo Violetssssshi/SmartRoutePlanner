@@ -7,6 +7,67 @@ This project was developed using HTML, CSS, and modular JavaScript, integrating 
 
 Below is a detailed breakdown of the repository structure and the core modules that power Smart Route Planner.
 
+## Tutorial:
+
+1. Set Your Google Maps API Key  
+   Open `index.html` and replace `YOUR_API_KEY` in the script tag with your own key:
+   ```html
+   <script async
+     src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
+   </script>
+   ```
+
+2. Open the Application  
+   Simply open `index.html` in any modern web browser (Chrome, Firefox, Edge). No installation or server setup is required.
+
+3. Search for Places  
+   Use the search bar at the top of the sidebar to find locations (e.g., cafés, stores, museums). The app uses Google Places Autocomplete to suggest results as you type.
+
+4. Preview & Mark a Location  
+   After selecting a place, a temporary marker appears on the map with an info window showing:
+   - Place name
+   - Category
+   - Star rating (if available)
+   - Business hours (weekday text)
+   - Open/closed status  
+   Click the **"Mark Location"** button in the info window to add it to your trip.
+
+5. Define Your Trip Start  
+   Set your trip’s **start time** and **start date** using the inputs in the sidebar. This information will be used to:
+   - Estimate arrival times at each stop
+   - Predict whether each destination will be open
+
+6. Plan and Edit Your Route  
+   Each marked location appears in a table with:
+   - Stop order
+   - Name and category
+   - Auto-calculated arrival time
+   - Predicted open/closed status
+   - Editable time (in minutes) to spend at that stop  
+   You can:
+   - Drag rows to reorder your trip
+   - Manually adjust time spent at each location
+   - Delete unwanted stops
+
+7. Generate the Route  
+   Click **“Generate Route”** to draw a walking path between stops on the map and recalculate:
+   - Arrival times
+   - Open/closed status for each stop
+
+8. Save or Load a Trip Plan  
+   - Click **“Save Current Plan”** to name and store your itinerary locally.  
+   - Use the dropdown to select and **“Load”** a saved plan or **“Delete”** one you no longer need.
+
+9. Export Your Plan  
+   Click **“Export Plan to PDF”** to generate a clean, printable summary that includes:
+   - Stop-by-stop details (name, time, category)
+   - Travel durations
+   - Time spent
+   - Final estimated end time
+
+All features run entirely in-browser using localStorage—no login or server required.
+
+
 ## The Goal / Moving Forward
 Smart Route Planner already supports single-day personalized trip planning with full route customization and real-time business hour logic. Future developments will include:
 
