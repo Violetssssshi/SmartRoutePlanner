@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Smart Route Planner - Williamsburg</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="SourceCode/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
   <script>
     window.initMap = () => {
-      import('./main.js').then(module => {
+      import('./SourceCode/main.js').then(module => {
         if (module.default) module.default(); // call exported default function
       });
     };

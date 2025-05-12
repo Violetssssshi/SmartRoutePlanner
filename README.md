@@ -7,6 +7,22 @@ This project was developed using HTML, CSS, and modular JavaScript, integrating 
 
 Below is a detailed breakdown of the repository structure and the core modules that power Smart Route Planner.
 
+## The Goal / Moving Forward
+Smart Route Planner already supports single-day personalized trip planning with full route customization and real-time business hour logic. Future developments will include:
+
+1. Multi-day Trip Planning
+   Allow users to plan and organize multi-day itineraries, assign stops to specific dates, and view each day’s plan separately.
+
+2. Real-Time Context Awareness
+   Integrate weather forecasts, temporary closures, and event alerts from third-party APIs to improve accuracy and reliability.
+
+3. Smart Recommendations
+   Suggest visit durations, categories of interest, and optimized routes using crowd data, Google Popular Times, or machine learning models.
+
+4. Polished UI/UX
+   Improve mobile responsiveness, add map-based reordering, and enhance accessibility for a seamless, device-friendly experience.
+
+
 ## Directory Structure
 
 ```
@@ -20,11 +36,11 @@ SmartRoutePlanner/
 │   ├── storage.js             # Manages saving, loading, and deleting plans via localStorage
 │   ├── tableManager.js        # Builds and updates the interactive route table
 │   ├── timeUtils.js           # Utility functions for time parsing and formatting
+│   ├── main.js                    # Initializes the app and event listeners
+│   ├── style.css                  # Styling for map, sidebar, buttons, and table
 ├── WriteUp/
 │   └── Smart_Route_Planner_Writeup_final.pdf  # Final project report
 ├── index.html                 # Main UI entry point
-├── main.js                    # Initializes the app and event listeners
-├── style.css                  # Styling for map, sidebar, buttons, and table
 ├── README.md                  # Project documentation
 ├── .hintrc                    # Hinting configuration for code quality
 ```
@@ -96,17 +112,3 @@ Custom styles for the UI:
 - Color-coded category icons
 - Drag indicators and interactive visuals
 
-## The Goal / Moving Forward
-Smart Route Planner already supports single-day personalized trip planning with full route customization and real-time business hour logic. Future developments will include:
-
-1. Multi-day Trip Planning
-   Allow users to plan and organize multi-day itineraries, assign stops to specific dates, and view each day’s plan separately.
-
-2. Real-Time Context Awareness
-   Integrate weather forecasts, temporary closures, and event alerts from third-party APIs to improve accuracy and reliability.
-
-3. Smart Recommendations
-   Suggest visit durations, categories of interest, and optimized routes using crowd data, Google Popular Times, or machine learning models.
-
-4. Polished UI/UX
-   Improve mobile responsiveness, add map-based reordering, and enhance accessibility for a seamless, device-friendly experience.
