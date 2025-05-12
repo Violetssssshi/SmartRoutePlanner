@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Smart Route Planner - Williamsburg</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <script>
+    window.initMap = () => {
+      import('./main.js').then(module => {
+        if (module.default) module.default(); // call exported default function
+      });
+    };
+  </script>
+
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkcvuNMRVzg_6Tf3selW2aHBTLTUipAKI&libraries=places&callback=initMap">
+  </script>
+  
+</head>
+<body>
+  <div id="container">
+    <div id="map"></div>
+    <div id="sidebar">
+      <input id="pac-input" type="text" placeholder="Search for stores or restaurants" />
+      
+      <div class="buttons">
+        <button id="clearBtn">Clear Table</button>
+        <button id="routeBtn">Generate Route</button>
+      </div>
+      
+      <div class="buttons">
+        <button id="saveBtn">Save Current Plan</button>
+        <select id="loadDropdown">
+          <option value="">-- Load a Saved Plan --</option>
+        </select>
+        <button id="loadBtn">Load Selected Plan</button>
+        <button id="deleteBtn">Delete Selected Plan</button>
+      </div>  
+
+      <div style="margin-bottom: 10px;">
+        <label for="start-time">Start Time:</label>
+        <input type="time" id="start-time" value="09:30" />
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" value="2025-04-25" />
+      </div>
+
+      <table id="markedTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Arrival Time</th>
+            <th>Status</th>
+            <th>Time (min)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="buttons" style="margin-top: 10px;">
+        <button id="exportPdfBtn">Export Plan to PDF</button>
+      </div>    
+
+    </div>
+  </div>
+</body>
+</html>
